@@ -3,7 +3,7 @@ import { fetchDailyData } from '../../api';
 import { Line, Bar } from 'react-chartjs-2';
 
 import styles from './Chart.module.css'
-import { registerables } from 'chart.js';
+// import { registerables } from 'chart.js';
 
 const Chart = ( {data: { confirmed, deaths, recovered}, country }) => {
     const [dailyData, setDailyData] = useState([]);
@@ -38,7 +38,6 @@ const Chart = ( {data: { confirmed, deaths, recovered}, country }) => {
         />) : null
     );
 
-    console.log(confirmed, recovered, deaths)
     const barChart = (
         confirmed
             ? (
